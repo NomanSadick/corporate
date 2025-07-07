@@ -1,9 +1,16 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Geist, Geist_Mono,Signika_Negative } from "next/font/google";
 import "./globals.css";
+
+
+
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
+  subsets: ["latin"],
+});
+const geistSignika = Signika_Negative({
+  variable: "--font-geist-signika-negative",
   subsets: ["latin"],
 });
 
@@ -24,7 +31,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${geistSans.variable} ${geistMono.variable}`}>
+      <body
+        className={`${geistSans.variable} ${geistSignika.variable} antialiased`}
+      >
         {children}
       </body>
     </html>
