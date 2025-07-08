@@ -6,5 +6,9 @@
   .container-custom {
     @apply px-4 md:w-[1120px] md:mx-auto;
   }
+
+  .bg-gradient-custom {
+  background: linear-gradient(to right, #010020 0%, #055469 100%);
+}
 }
 
