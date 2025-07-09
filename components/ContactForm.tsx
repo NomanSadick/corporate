@@ -7,6 +7,7 @@ import {
   contactFormSchema,
   ContactFormSchema,
 } from "@/app/validation/formSchema";
+import Image from "next/image";
 
 export default function ContactForm() {
   const [submitContactForm, { isLoading }] = useSubmitContactFormMutation();
@@ -33,7 +34,17 @@ export default function ContactForm() {
   return (
     <section className=" py-12">
       <div className="container-custom mx-auto px-4">
-        <div className="bg-gradient-to-b from-[#010020]/75 to-[#055469]/75  shadow-lg rounded-xl p-8">
+        <div className="bg-gradient-to-b from-[#010020]/75 to-[#055469]/75  shadow-lg rounded-xl p-8 relative">
+          <div className="absolute top-0 left-0 mt-0 md:mt-6 -ml-32 md:-ml-40">
+            <Image
+              src="/images/Vector (1).png"
+              alt="Contact Banner"
+              width={300}
+              height={100}
+              className="w-[250px] h-[120px] md:w-[300px] md:h-[200px] object-contain"
+            />
+          </div>
+
           <h2 className="text-[32px] leading-[40px] md:text-[64px] md:leading-[80px] font-semibold text-center text-white pb-8">
             {/* Mobile Text */}
             <span className="block md:hidden">What We Offer</span>
@@ -47,12 +58,12 @@ export default function ContactForm() {
             className="space-y-4 px-4 md:px-16"
           >
             {/* Row 1 - Name and Service */}
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-8">  
               <div>
                 <input
                   {...register("name")}
                   placeholder="Name*"
-                  className="w-full px-2 md:px-4 py-2 bg-slate-500/50 text-white placeholder-gray-300 border border-slate-500 rounded "
+                  className="w-full px-2 md:px-4 py-2 bg-[#ACABAB] bg-opacity-30 text-white placeholder-gray-300 border border-slate-500 rounded "
                 />
                 {errors.name && (
                   <p className="text-red-400 text-sm mt-1">
@@ -64,7 +75,7 @@ export default function ContactForm() {
                 <input
                   {...register("service")}
                   placeholder="Service"
-                  className="w-full px-2 md:px-4 py-2 bg-slate-500/50 text-white placeholder-gray-300 border border-slate-500 rounded "
+                  className="w-full px-2 md:px-4 py-2 bg-[#ACABAB] bg-opacity-30 text-white placeholder-gray-300 border border-slate-500 rounded "
                 />
                 {errors.service && (
                   <p className="text-red-400 text-sm mt-1">
@@ -80,7 +91,7 @@ export default function ContactForm() {
                 <input
                   {...register("phone")}
                   placeholder="Phone*"
-                  className="w-full px-2 md:px-4 py-2 bg-slate-500/50 text-white placeholder-gray-300 border border-slate-500 rounded "
+                  className="w-full px-2 md:px-4 py-2 bg-[#ACABAB] bg-opacity-30 text-white placeholder-gray-300 border border-slate-500 rounded "
                 />
                 {errors.phone && (
                   <p className="text-red-400 text-sm mt-1">
@@ -93,7 +104,7 @@ export default function ContactForm() {
                   {...register("email")}
                   placeholder="Email"
                   type="email"
-                  className="w-full px-2 md:px-4 py-2 bg-slate-500/50 text-white placeholder-gray-300 border border-slate-500 rounded "
+                  className="w-full px-2 md:px-4 py-2 bg-[#ACABAB] bg-opacity-30 text-white placeholder-gray-300 border border-slate-500 rounded "
                 />
                 {errors.email && (
                   <p className="text-red-400 text-sm mt-1">
@@ -110,7 +121,7 @@ export default function ContactForm() {
                   {...register("travelers")}
                   type="number"
                   placeholder="No of Travelers"
-                  className="w-full px-2 md:px-4 py-2 bg-slate-500/50 text-white placeholder-gray-300 border border-slate-500 rounded "
+                  className="w-full px-2 md:px-4 py-2 bg-[#ACABAB] bg-opacity-30 text-white placeholder-gray-300 border border-slate-500 rounded "
                 />
               </div>
               <div>
@@ -118,7 +129,7 @@ export default function ContactForm() {
                   {...register("travelDate")}
                   type="date"
                   placeholder="Travel Date"
-                  className="w-full px-2 md:px-4 py-2 bg-slate-500/50 text-white placeholder-gray-300 border border-slate-500 rounded [color-scheme:dark]"
+                  className="w-full px-2 md:px-4 py-2 bg-[#ACABAB] bg-opacity-30 text-white placeholder-gray-300 border border-slate-500 rounded [color-scheme:dark]"
                 />
               </div>
             </div>
@@ -129,7 +140,7 @@ export default function ContactForm() {
                 <input
                   {...register("destination")}
                   placeholder="Destination"
-                  className="w-full px-2 md:px-4 py-2 bg-slate-500/50 text-white placeholder-gray-300 border border-slate-500 rounded "
+                  className="w-full px-2 md:px-4 py-2 bg-[#ACABAB] bg-opacity-30 text-white placeholder-gray-300 border border-slate-500 rounded "
                 />
               </div>
 
@@ -138,7 +149,7 @@ export default function ContactForm() {
                   {...register("note")}
                   placeholder="Additional Notes"
                   rows={1}
-                  className="w-full px-2 md:px-4 py-2 bg-slate-500/50 text-white placeholder-gray-300 border border-slate-500 rounded resize-none"
+                  className="w-full px-2 md:px-4 py-2 bg-[#ACABAB] bg-opacity-30 text-white placeholder-gray-300 border border-slate-500 rounded resize-none"
                 />
               </div>
             </div>
