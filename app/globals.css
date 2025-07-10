@@ -8,7 +8,15 @@
   }
 
   .bg-gradient-custom {
-  background: linear-gradient(to right, #010020 0%, #055469 100%);
-}
+    background: linear-gradient(to right, #010020 0%, #055469 100%);
+  }
 }
 
+/* ✅ Put these outside of @layer and class blocks */
+.custom-dots li button {
+  background-color: #d1d5db; /* Tailwind gray-300 */
+}
+
+.custom-dots li.slick-active button {
+  background-color: #f97316; /* Tailwind orange-500 */
+}

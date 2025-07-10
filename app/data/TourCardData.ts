@@ -1,0 +1,43 @@
+import { TourCardInfo } from "../types/TourCard";
+
+export const TourCardData: TourCardInfo[] = [
+  {
+    id: 1,
+    destination: "Sea Pearl Beach Resort & Spa Cox's Bazar",
+    location: "Cox’s Bazar, Bangladesh",
+    duration: "2 Nights",
+    price: 32200,
+    currency: "BDT",
+    discount: "Up to 10%",
+     image: "/images/05.jpg",
+    type: "tour",
+    rating: 7.8,
+    star: 3,
+  },
+  {
+    id: 2,
+    destination: "Sea Pearl Beach Resort & Spa Cox's Bazar",
+    location: "Cox’s Bazar, Bangladesh",
+    duration: "2 Nights",
+    price: 32200,
+    currency: "BDT",
+    discount: "Up to 10%",
+    image: "/images/05.jpg",
+    type: "tour",
+    rating: 7.8,
+    star: 3,
+  },
+  {
+    id: 3,
+    destination: "Sea Pearl Beach Resort & Spa Cox's Bazar",
+    location: "Cox’s Bazar, Bangladesh",
+    duration: "2 Nights",
+    price: 32200,
+    currency: "BDT",
+    discount: "Up to 10%",
+    image: "/images/05.jpg",
+    type: "tour",
+    rating: 7.8,
+    star: 3,
+  },
+];
