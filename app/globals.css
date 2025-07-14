@@ -14,9 +14,9 @@
 
 /* ✅ Put these outside of @layer and class blocks */
 .custom-dots li button {
-  background-color: #d1d5db; /* Tailwind gray-300 */
+  background-color: #d1d5db; 
 }
 
 .custom-dots li.slick-active button {
-  background-color: #f97316; /* Tailwind orange-500 */
+  background-color: #f97316; 
 }
